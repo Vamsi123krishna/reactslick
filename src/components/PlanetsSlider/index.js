@@ -1,4 +1,3 @@
-// Write your code here
 import Slider from 'react-slick'
 import PlanetItem from '../PlanetItem'
 
@@ -11,12 +10,12 @@ const PlanetsSlider = props => {
     slidesToScroll: 1,
   }
   return (
-    <div testid="planets">
+    <div data-testid="planets">
       <div className="bg-container-slider">
         <button className="previous-btn"></button>
-        <Slider {...settings}>
+        <Slider>
           {planetsList.map(eachItem => (
-            <PlanetItem eachItem={eachItem} testid="planets" />
+            <PlanetItem eachItem={eachItem} key={eachItem.id} />
           ))}
         </Slider>
         <button className="previous-btn"></button>
